@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <div class="d-flex justify-content-center">
+    <app-todo-adder (addTodo)="onAddTodo($event)"></app-todo-adder>
+  </div>
+  <ul class="list-group">
+    <app-todo-item *ngFor="let item of todos" [item]="item" (deleteTodo)="onDeleteTodo($event)"
+      (updateTodo)="onUpdateTodo($event)"></app-todo-item>
+  </ul>
+</div>

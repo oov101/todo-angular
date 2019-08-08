@@ -1,0 +1,13 @@
+<li class="list-group-item d-flex align-item-center">
+  <div class="d-flex flex-column justify-content-center">
+    <input type="checkbox" class="mr-2" (click)="onCheckboxToggle()">
+  </div>
+  <div class="d-flex flex-column justify-content-center">
+    <span [ngClass]="toggleClasses()">{{ item.title }}</span>
+  </div>
+  <div class="d-flex flex-grow-1 justify-content-end">
+    <div>
+      <button class="btn btn-outline-danger ml-2" (click)="onDeleteItem()">x</button>
+    </div>
+  </div>
+</li>

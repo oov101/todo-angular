@@ -1,0 +1,12 @@
+<div class="input-group mb-3">
+  <div class="input-group mb-3">
+    <form name="form" #todoForm="ngForm" (ngSubmit)="todoForm.form.valid && onSubmit(); todoForm.form.reset()">
+      <div class="d-flex">
+        <input type="text" class="form-control" placeholder="Todo content" aria-label="Todo content"
+          aria-describedby="button-addon2" name="todoText" [(ngModel)]="model.todoText" #todoText="ngModel" required>
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2"
+          [disabled]="!todoForm.form.valid">Add</button>
+      </div>
+    </form>
+  </div>
+</div>
